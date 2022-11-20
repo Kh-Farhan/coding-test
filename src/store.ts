@@ -20,7 +20,15 @@ export const { actions, reducer } = createSlice({
       ...action.payload,
     }),
     // TODO: Write this reducer
-    // addTransactions:
+    addTrasnsaction: (state, action: PayloadAction<Partial<State>>) => ({
+      ...state,
+      transactions:{...state.transactions,...action.payload.transactions}
+    }),
+    clearStore: (state, action) => ({
+      ...state,
+      tasks:[],
+      transactions:{}
+    }),
   },
 });
 

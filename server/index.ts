@@ -43,7 +43,7 @@ async function getResult(
 
   if (!user) return null;
 
-  if (url.indexOf('/transactions/delete/') === 0) {
+  if (url.indexOf('/delete/') === 0) {
     return {
       id: url.split('/').pop(),
       deleted: true
